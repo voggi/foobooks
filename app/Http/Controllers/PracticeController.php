@@ -6,10 +6,16 @@ use Illuminate\Http\Request;
 use Config;
 use App;
 use Debugbar;
+use Log;
 use IanLChapman\PigLatinTranslator\Parser;
 
 class PracticeController extends Controller
 {
+    public function practice6()
+    {
+        Log::info('This is just a test.');
+    }
+
     public function practice5()
     {
         $translator = new Parser();

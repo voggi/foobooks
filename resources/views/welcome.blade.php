@@ -1,13 +1,17 @@
-<!doctype html>
-<html lang="{{ app()->getLocale() }}">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.master')
 
-        <title>Foobooks</title>
-    </head>
-    <body>
-        <h1>Welcome to Foobooks</h1>
-    </body>
-</html>
+@section('title')
+    Welcome to Foobooks
+@endsection
+
+@section('content')
+    <h1>Welcome</h1>
+
+    <p>
+        Foobooks is simple book organizer, used to catalog all your favorite reads.
+    </p>
+    
+    <p>
+        Choose a feature above to get started.
+    </p>
+@endsection

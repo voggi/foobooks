@@ -3,6 +3,16 @@
 return [
     'supportEmail' => 'help@foobooks.bookrunner.de',
 
+    'nav' => [
+        '/books' => 'Books',
+        '/books/create' => 'New Book',
+        '/books/search' => 'Search',
+        '/trivia' => 'Trivia',
+        '/practice' => 'Practice',
+        '/about' => 'About',
+        '/contact' => 'Contact',
+    ],
+
     /*
     |--------------------------------------------------------------------------
     | Application Name
