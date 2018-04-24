@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Log;
+use App\Book;
 
 class BookController extends Controller
 {
@@ -12,7 +13,17 @@ class BookController extends Controller
     */
     public function index()
     {
-        return view('books.index');
+        $books = Book::orderBy('title')->get();
+
+        # Query the database to get the last 3 books added
+        # $newBooks = Book::latest()->limit(3)->get();
+        # [Better] Query the existing Collection to get the last 3 books added
+        $newBooks = $books->sortByDesc('created_at')->take(3);
+
+        return view('books.index')->with([
+            'books' => $books,
+            'newBooks' => $newBooks,
+        ]);
     }
 
     public function show($title = null)
